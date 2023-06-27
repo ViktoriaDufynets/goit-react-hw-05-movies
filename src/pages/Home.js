@@ -28,7 +28,7 @@ function Home() {
         
               setMovies(moviesArray);
         })
-    }, []);
+    }, [movies]);
 
     return (
         movies && (
