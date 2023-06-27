@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useLocation, NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import movieSearch from 'API/movieSearch';
 import Searchbar from 'components/Searchbar/Searchbar';
 import MoviesList from 'components/MovieList/MovieList';

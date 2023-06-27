@@ -1,5 +1,4 @@
 import MovieCard from "components/MovieCard/MovieCard";
-import { useLocation, Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 import css from './MovieList.module.css';
 
