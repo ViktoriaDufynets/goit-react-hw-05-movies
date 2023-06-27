@@ -1,0 +1,15 @@
+.Actors {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.Actorsname {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(3,37,65);
+}

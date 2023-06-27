@@ -1,0 +1,14 @@
+.Tranding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    font-size: 30px;
+    color: rgb(3,37,65);;
+    height: 70px;
+    width: auto;
+    background-color: rgb(3,37,65);
+    color: white;
+    border: 3px solid rgb(120, 186, 231);
+    border-radius: 4px;
+}

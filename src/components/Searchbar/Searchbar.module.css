@@ -1,0 +1,30 @@
+.Container {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Input {
+    height: 50px;
+    width: 350px;
+    border: 2px solid rgb(120, 186, 231);
+    font-size: 24px;
+    color: rgb(3,37,65);;
+}
+
+.Search {
+    height: 50px;
+    background-color: rgb(120, 186, 231);
+    cursor: pointer;
+    background-color: rgb(3,37,65);
+    color: white;
+    font-size: 24px;
+    border: 3px solid rgb(120, 186, 231);
+
+}

@@ -1,0 +1,40 @@
+.Header {
+    top: 0;
+    left: 0;
+    min-height: 200px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: rgb(3,37,65);
+    z-index: 10;
+}
+
+.Title {
+    color: white;
+    margin-top: 40px;
+    padding-left: 40px;
+}
+
+.Headerlist {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    padding-left: 75px;
+}
+
+.Element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    color: rgb(252, 252, 252);
+    font-size: 24px;
+}
+
+.Element:focus {
+    color: rgb(120, 186, 231);
+}

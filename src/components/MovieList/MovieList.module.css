@@ -1,0 +1,14 @@
+.List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    min-width: 0;
+    list-style: none;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 0.0625rem solid rgba(0,0,0,.05);
+    border-radius: 0.25rem;
+    object-fit: cover;
+    padding-right: 40px;
+    margin-top: 30px;    
+}
