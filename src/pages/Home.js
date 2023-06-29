@@ -7,6 +7,7 @@ function Home() {
     const [movies, setMovies] = useState(null);
 
     useEffect(() => {
+  
         trending().then(({ results }) => {
             const moviesArray = results.map(({ id, original_title, poster_path, vote_average, vote_count }) => ({
                     id,
@@ -16,7 +17,7 @@ function Home() {
                     votecount: vote_count,
                   }));        
               setMovies(moviesArray);
-        })
+        }).catch(error => {(console.log('ERRORA'))})
     }, []);
 
     return (

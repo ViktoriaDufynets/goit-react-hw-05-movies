@@ -38,7 +38,7 @@ function MovieDetails() {
 
         return setMovieInfo(movieInfo);
       },
-    );
+    ).catch(error => {(console.log('No details'))});
   }, [movieId]);
 
   return (

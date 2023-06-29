@@ -27,7 +27,7 @@ function Movies() {
         if (results.length === 0) {
           alert('No videos matched your search. Try again with a different search')
         }
-      });
+      }).catch(error => {(console.log('No movies'))});
     }
   }, [query]);
 

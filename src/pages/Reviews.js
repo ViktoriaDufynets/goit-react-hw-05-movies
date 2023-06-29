@@ -16,7 +16,7 @@ function Reviews() {
           text: content,
         }));
       setReviews(reviewsArray);
-    });
+    }).catch(error => {(console.log('No reviews'))});
   }, [movieId]);
 
   return reviews && reviews.length > 0 ? (

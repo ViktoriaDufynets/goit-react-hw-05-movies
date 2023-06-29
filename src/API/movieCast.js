@@ -1,4 +1,4 @@
-async function movieCredits(movieId) {
+async function movieCast(movieId) {
     const key = '29ab84dcc4d690c01746cf216b8a2af7';
     const url = `https://api.themoviedb.org/3/movie/${movieId}/credits`;
     const filter = `?api_key=${key}&language=en-US`;
@@ -9,4 +9,4 @@ async function movieCredits(movieId) {
     return data;
   }
   
-  export default movieCredits;
+  export default movieCast;
