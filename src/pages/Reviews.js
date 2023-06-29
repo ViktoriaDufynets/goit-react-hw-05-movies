@@ -10,18 +10,11 @@ function Reviews() {
 
   useEffect(() => {
     movieReview(movieId).then(({ results }) => {
-      const reviewsArray = [];
-
-      results.map(({ id, author, content }) => {
-        const review = {
+      const reviewsArray = results.map(({ id, author, content }) => ({
           id,
           author,
           text: content,
-        };
-
-        return reviewsArray.push(review);
-      });
-
+        }));
       setReviews(reviewsArray);
     });
   }, [movieId]);

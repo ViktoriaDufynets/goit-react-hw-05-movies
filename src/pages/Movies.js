@@ -11,32 +11,24 @@ function Movies() {
 
 
   useEffect(() => {
-    console.log(query);
+    if (query === '') {
+      return;
+    }
     if (query !== '') {
       movieSearch(query).then(({ results }) => {
-        const moviesArray = [];
-
-        results.map(
-          ({ id, original_title, poster_path, vote_average, vote_count }) => {
-            const movie = {
+        const moviesArray = results.map(({ id, original_title, poster_path, vote_average, vote_count }) => ({
               id,
               title: original_title,
               poster: poster_path,
               voteAverage: vote_average,
               voteCount: vote_count,
-            };
-
-            return moviesArray.push(movie);
-          },
-        );
+            }));
         setMovies(moviesArray);
         if (results.length === 0) {
           alert('No videos matched your search. Try again with a different search')
-
         }
       });
     }
-
   }, [query]);
 
   return (

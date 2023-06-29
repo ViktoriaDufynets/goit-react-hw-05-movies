@@ -2,6 +2,7 @@ import { useState, useEffect, lazy, Suspense } from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';
 import movieDetails from 'API/movieDetails';
 import MovieInfo from 'components/MovieDetails/MobieDetails.jsx';
+import Loader from 'components/Loader/Loader.jsx';
 
 const Cast = lazy(() =>
   import('./Cast.js'),
@@ -43,7 +44,7 @@ function MovieDetails() {
   return (
     <>
       {movieInfo && <MovieInfo movieInfo={movieInfo} />}
-      <Suspense>
+      <Suspense  fallback={<Loader/>}>
         <Routes>
           <Route path="/cast" element={<Cast />} />
           <Route path="/reviews" element={<Reviews />} />

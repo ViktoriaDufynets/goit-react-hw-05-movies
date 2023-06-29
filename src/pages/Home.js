@@ -7,28 +7,17 @@ function Home() {
     const [movies, setMovies] = useState(null);
 
     useEffect(() => {
-      if (movies === []) {
-        return;
-      }
         trending().then(({ results }) => {
-            const moviesArray = [];
-            results.map(
-                ({ id, original_title, poster_path, vote_average, vote_count }) => {
-                  const movie = {
+            const moviesArray = results.map(({ id, original_title, poster_path, vote_average, vote_count }) => ({
                     id,
                     title: original_title,
                     poster: poster_path,
                     voteaverage: Math.ceil(vote_average * 10),
                     votecount: vote_count,
-                  };
-        
-                  return moviesArray.push(movie);
-                },
-              );
-        
+                  }));        
               setMovies(moviesArray);
         })
-    }, [movies]);
+    }, []);
 
     return (
         movies && (

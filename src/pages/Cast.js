@@ -6,21 +6,15 @@ import ActorsList from "components/ActorsList/ActorsList";
 function Cast() {
   const { movieId } = useParams();
   const [actors, setActors] = useState(null);
+//  const [error] = useState(null);
 
   useEffect(() => {
     movieCredits(movieId).then(({ cast }) => {
-      const actorsArray = [];
-
-      cast.map(({ id, name, profile_path }) => {
-        const actor = {
+      const actorsArray = cast.map(({ id, name, profile_path }) => ({
           id,
           name,
           photo: profile_path,
-        };
-
-        return actorsArray.push(actor);
-      });
-
+    }));
       setActors(actorsArray);
     });
   }, [movieId]);
